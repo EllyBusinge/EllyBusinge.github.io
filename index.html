@@ -5,14 +5,70 @@
     <meta name="description" content="">
     <meta name="author" content="Elly Businge">
 	<title>My Personal Blog</title>
+
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+		
+		.column {
+		  float: left;
+		  padding: 10px;
+		  height: 100px; 
+		}
+		
+		.left {
+		  width: 80%;
+		}
+
+		.right {
+		  width: 20%;
+		}
+
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+	</style>
 </head>
 <body>
-
-<p>
-<a href="http://validator.w3.org/check/referer"> <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/></a>
-</p>
-
+	<div id="container"> 
+		<div id="header" style="background-color: cornflowerblue;"> 
+			<img src="images/elly3.jpg" alt="elly" width="200" height="200" style="border-radius: 50%;"/>
+		</div>
+	
+		<div id="content"> 
+			<h1>ELLY BUSINGE</h1>
+			<ul>
+				<li>Lab01 - Home Page</li>
+				<li>Lab02 - About Me</li>
+				<li>Lab03 - Recipe</li>
+				<li>Lab04 - Movie Review</li>
+				<li>Lab05</li>
+				<li>Lab06</li>
+				<li>Lab07</li>
+				<li>Lab08</li>
+				<li>Lab09</li>
+				<li>Lab10</li>
+				<li>Final Exam</li>
+			</ul>
+		</div>
+		<div id="footer" class="row"> 
+			<div class="column left" id="left">  
+				<h3>Elly Businge</h3>
+				Maharishi International University</br>
+				Address: 1000 N 4th St., Fairfield, Iowa, 52557</br>
+				Email: ebusinge@miu.edu
+			</div>
+			<div class="column right" id="right"> 
+				<p>
+					<a href="http://validator.w3.org/check/referer"> 
+						<img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
+					</a>
+				</p>
+			</div>
+		</div>
+	</div>
 </body>
-<footer>
-</footer>
 </html>
