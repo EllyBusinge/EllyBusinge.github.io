@@ -30,11 +30,7 @@
     border-radius: 50%; 
     margin-left: 15px;
     margin-top: 5px;
-  }  
-
-  .textColor {
-    color: darkred;
-  }
+  } 
 
   span.normal {
     font-weight: normal;
@@ -64,4 +60,13 @@
   
   b.emph {
     color: khaki;
+  }
+
+  .my-mood {
+    height: 570px;
+  }
+
+  span.italic {
+    font-family: cursive, sans-serif;
+    font-style: italic;
   }
