@@ -1,9 +1,20 @@
   * {
     box-sizing: border-box;
+    background-color: darkgrey;
   }
   
   .column {
     float: left;
+    padding: 10px;
+  }
+
+  .left {
+    float: left;
+    padding: 10px;
+  }
+
+  .right {
+    float: right;
     padding: 10px;
   }
 
