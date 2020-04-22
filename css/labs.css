@@ -39,7 +39,13 @@
     color: darkred;
   }
 
-  .moods {
+  span.normal {
+    font-weight: normal;
+    font-size:20px
+  }
+  
+  span.thick {
+    font-weight: bold;
     font-size:20px
   }
 
