@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     font-family: Verdana, Tahoma;
     font-size: 8pt;
+    margin-bottom: 0px;
 }
 
 .header_txt {
@@ -14,6 +15,12 @@ body {
     position: absolute;
     left: 40%;
     margin-top: 12px;
+}
+
+.rating_text {
+    font-weight: bold; 
+    font-size: 48pt;
+    color: red;
 }
 
 .div_h1 {
@@ -27,17 +34,19 @@ img.header_img {
 }
 
 img.right_img_div {
-    border-radius: 0px 23px 0px 0px; 
+    border-radius: 0px 17px 0px 0px; 
 }
 
 .right_div {
     width: 250px;
-    background-color: springgreen;
+    background-color: #A2B964;
     top: 0;
     z-index: 10;
     right: 0;
     position: absolute;
-    border-radius: 0px 23px 0px 0px; 
+    border-radius: 0px 17px 17px 0px; 
+    font-size: 8pt;
+    font-family: Arial;
 }
 
 .left_div {
@@ -46,18 +55,23 @@ img.right_img_div {
     margin-bottom: 5px;
 }
 
+.left_div_container {
+    width: 550px;
+    border: 2px solid gray;
+}
+
 a.validator {
     float: right;
 }
 
 .container {
-    border: 2px solid gray;
+    border: 4px solid gray;
     width: 800px;
     position: relative; 
-    
-    border-radius: 25px;
-    height: 1433px;
-    margin: 9% 0% 0% 16%;
+    left: 4%;
+    border-radius: 20px;
+    height: 1135px;
+    margin: 9% 0% -5% 16%;
 }
 
 .banner_img {
@@ -83,7 +97,7 @@ a.validator {
     height: 50px;
     position: absolute;
     left: 0px;
-    border-radius: 23px 23px 0px 0px; 
+    border-radius: 16px 0px 0px 0px; 
 }
 
 .banners {
@@ -94,10 +108,11 @@ a.validator {
 
 p.thick {
     border: 2px solid gray;    
-    border-radius: 6px;
+    border-radius: 10px;
     margin: 5px;
     width: 90%;
-    padding: 5px;
+    padding: 8px;
+    background-color: #E8DC9B;
 }
 
 .left_div_item {
