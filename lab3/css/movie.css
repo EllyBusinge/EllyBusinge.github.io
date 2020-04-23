@@ -44,11 +44,7 @@ img.right_img_div {
 }
 
 .left_div {
-    border: 2px solid gray;
-    width: 70%;
-    float: left;
-    border-radius: 0px 0px 23px 0px; 
-    position: absolute;
+    width: 73%;
     display: flex;
     margin-bottom: 5px;
 }
