@@ -9,16 +9,23 @@ body {
     font-family: Tahoma, Verdana;
     font-size: 24pt;
     text-shadow: 3px 3px #999999;
-    margin:auto;
-    line-height:51px;
-    vertical-align:middle;
+    margin:0;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.div_h1 {
+    margin-bottom: 70px;
 }
 
 img.header_img {
     width: 100%;
 }
 
-img.right_div {
+img.right_img_div {
     border-radius: 0px 23px 0px 0px; 
 }
 
@@ -29,6 +36,7 @@ img.right_div {
     z-index: 10;
     right: 0;
     position: absolute;
+    border-radius: 0px 23px 0px 0px; 
 }
 
 .left_div {
@@ -52,8 +60,8 @@ a.validator {
     position: relative; 
     
     border-radius: 25px;
-    height: 1200px;
-    margin: 1% 20% 0% 20%;
+    height: 1433px;
+    margin: 1% 0% 0% 16%;
 }
 
 .banner_img {
@@ -89,4 +97,9 @@ p.thick {
 
 .left_div_item {
     width: 50%;
+}
+
+dt {
+    font-weight: bold; 
+    padding: 10pt;
 }
