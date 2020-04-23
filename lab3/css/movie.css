@@ -2,7 +2,8 @@ body {
 	background-image: url("../images/background.png");
 	background-repeat: repeat;
     background-attachment: fixed;
-    
+    font-family: Verdana, Tahoma;
+    font-size: 8pt;
 }
 
 .header_txt {
@@ -11,10 +12,8 @@ body {
     text-shadow: 3px 3px #999999;
     margin:0;
     position: absolute;
-    top: 18%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    left: 40%;
+    margin-top: 12px;
 }
 
 .div_h1 {
@@ -23,10 +22,8 @@ body {
 
 img.header_img {
     width: 48%;
-    z-index: 0;
     margin-left: 22%;
-    position:relative;
-    top: -8px;
+    height: 50px;
 }
 
 img.right_img_div {
@@ -44,7 +41,7 @@ img.right_img_div {
 }
 
 .left_div {
-    width: 73%;
+    width: 68%;
     display: flex;
     margin-bottom: 5px;
 }
@@ -54,18 +51,17 @@ a.validator {
 }
 
 .container {
-    background-color: springgreen;
     border: 2px solid gray;
-    width: 900px;
+    width: 800px;
     position: relative; 
     
     border-radius: 25px;
     height: 1433px;
-    margin: 1% 0% 0% 16%;
+    margin: 9% 0% 0% 16%;
 }
 
 .banner_img {
-    width: 900px;
+    width: 800px;
     height: 50px;
     position: relative;
     top: 0;
@@ -73,9 +69,10 @@ a.validator {
     border-radius: 23px 23px 0px 0px; 
 }
 
-.banner_top_img {
+.div_top_img {
     width: -webkit-fill-available;
-    height: 40px;
+    background-image: url("../images/bannerbg.png");
+    height: 50px;
     position: absolute;
     top: 0;
     left: 0;
@@ -114,4 +111,9 @@ dt {
 
 q {
     font-weight: bold; 
+}
+
+.validator_div {
+    position: relative;
+    float: right;
 }
