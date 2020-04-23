@@ -22,7 +22,10 @@ body {
 }
 
 img.header_img {
-    width: 100%;
+    width: 30%;
+    z-index: 0;
+    margin-left: 22%;
+    position:relative;
 }
 
 img.right_img_div {
@@ -71,6 +74,14 @@ a.validator {
     top: 0;
     left: 0;
     border-radius: 23px 23px 0px 0px; 
+}
+
+.banner_top_img {
+    width: -webkit-fill-available;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .inner_img {
