@@ -40,12 +40,11 @@ img.right_img_div {
     width: 250px;
     background-color: #A2B964;
     top: 0;
-    z-index: 10;
     right: 0;
-    position: absolute;
-    border-radius: 0px 17px 17px 0px; 
+    border-top-right-radius: 17px 17px;
     font-size: 8pt;
     font-family: Arial;
+    float: right;
 }
 
 .left_div {
@@ -67,15 +66,17 @@ a.validator {
     border: 4px solid gray;
     width: 800px;
     position: relative; 
-    left: 4%;
+    
     border-radius: 20px;
-    height: 1135px;
-    margin: 9% 0% -5% 16%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9%;
+    position: absolute;
 }
 
 .banner_img {
     width: 800px;
-    height: 50px;
+    height: 83px;
     position: relative;
     top: 0;
     left: 0;
@@ -93,7 +94,7 @@ a.validator {
 
 .inner_img {
     width: 90px;
-    height: 50px;
+    height: 83px;
     position: absolute;
     left: 0px;
     border-radius: 16px 0px 0px 0px; 
