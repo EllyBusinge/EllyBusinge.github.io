@@ -1,17 +1,44 @@
 body {
 	background-image: url("../images/background.png");
 	background-repeat: repeat;
-	background-attachment: fixed;
+    background-attachment: fixed;
+    
+}
+
+.header_txt {
+    font-family: Tahoma, Verdana;
+    font-size: 24pt;
+    text-shadow: 3px 3px #999999;
+    margin:auto;
+    line-height:51px;
+    vertical-align:middle;
 }
 
 img.header_img {
     width: 100%;
 }
 
+img.right_div {
+    border-radius: 0px 23px 0px 0px; 
+}
+
+.right_div {
+    width: 250px;
+    background-color: springgreen;
+    top: 0;
+    z-index: 10;
+    right: 0;
+    position: absolute;
+}
+
 .left_div {
     border: 2px solid gray;
-    width: 250px;
-    float: right;
+    width: 70%;
+    float: left;
+    border-radius: 0px 0px 23px 0px; 
+    position: absolute;
+    display: flex;
+    margin-bottom: 5px;
 }
 
 a.validator {
@@ -23,15 +50,15 @@ a.validator {
     border: 2px solid gray;
     width: 900px;
     position: relative; 
-    left: 0; 
-    top: 0;
+    
     border-radius: 25px;
     height: 1200px;
+    margin: 1% 20% 0% 20%;
 }
 
 .banner_img {
     width: 900px;
-    height: 80px;
+    height: 50px;
     position: relative;
     top: 0;
     left: 0;
@@ -40,7 +67,7 @@ a.validator {
 
 .inner_img {
     width: 90px;
-    height: 80px;
+    height: 50px;
     position: absolute;
     left: 0px;
     border-radius: 23px 23px 0px 0px; 
@@ -50,4 +77,16 @@ a.validator {
     position: relative; 
     left: 0; 
     top: 0;
+}
+
+p.thick {
+    border: 2px solid gray;    
+    border-radius: 6px;
+    margin: 5px;
+    width: 90%;
+    padding: 5px;
+}
+
+.left_div_item {
+    width: 50%;
 }
