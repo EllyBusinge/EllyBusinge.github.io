@@ -13,7 +13,7 @@ body {
     font-weight: bold; 
     text-shadow: 3px 3px #999999;
     margin-top: 12px;
-    display: table;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
