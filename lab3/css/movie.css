@@ -48,14 +48,11 @@ img.right_img_div {
 }
 
 .left_div {
-    width: 68%;
     display: flex;
     margin-bottom: 5px;
-}
-
-.left_div_container {
+    margin-right: 5px;
+    margin-left: 5px;
     width: 550px;
-    border: 2px solid gray;
 }
 
 a.validator {
@@ -116,7 +113,8 @@ p.thick {
 }
 
 .left_div_item {
-    width: 50%;
+    width: 49%;
+    column-gap : 2%;
 }
 
 dt {
