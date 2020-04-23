@@ -10,11 +10,12 @@ body {
 .header_txt {
     font-family: Tahoma, Verdana;
     font-size: 24pt;
+    font-weight: bold; 
     text-shadow: 3px 3px #999999;
-    margin:0;
-    position: absolute;
-    left: 40%;
     margin-top: 12px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .rating_text {
@@ -23,13 +24,11 @@ body {
     color: red;
 }
 
-.div_h1 {
-    margin-bottom: 38px;
-}
-
 img.header_img {
-    width: 48%;
-    margin-left: 22%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
     height: 50px;
 }
 
