@@ -53,9 +53,6 @@ img.right_img_div {
 
 .left_div {
     display: grid;
-    /* margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px; */
     grid-template-columns: auto auto;
     grid-gap: 10px;
     width: 550px;
@@ -138,12 +135,7 @@ q {
     float: right;
 }
 
-.lower_div {
-    background-color: #A2B964;
-    min-height: 30px;
-}
-
-p.lower_div {
+p.lower_item {
     padding: 5px;
     background-color: #A2B964;
     min-height: 15px;
