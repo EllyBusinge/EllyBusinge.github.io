@@ -9,7 +9,7 @@
   <meta name="author" content="Elly Businge">
   <title>MUM Golden Dome Market</title>
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -54,21 +54,20 @@
   <main role="main" class="flex-shrink-0">
     <div class="container">
       <h3 class="mt-5">New Product Form</h3>
-
       <form class="needs-validation" novalidate="">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="firstName">Product Number</label>
             <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
             <div class="invalid-feedback">
-              Valid first name is required.
+              Valid product number is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="lastName">Quantity In Stock</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+            <input type="number" class="form-control" id="lastName" placeholder="" value="0" required="">
             <div class="invalid-feedback">
-              Valid last name is required.
+              Valid quantity value is required.
             </div>
           </div>
         </div>
@@ -78,46 +77,46 @@
             <label for="firstName">Name</label>
             <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
             <div class="invalid-feedback">
-              Valid first name is required.
+              Valid name is required.
             </div>
           </div>
 
           <div class="col-md-6 mb-3">
             <label for="country">Supplier</label>
             <select class="custom-select d-block w-100" id="country" required="">
-              <option value="">Choose...</option>
-              <option>United States</option>
+              <option value="">Select a supplier</option>
+              <option>John</option>
+              <option>James</option>
+              <option>Elly</option>
             </select>
             <div class="invalid-feedback">
-              Please select a valid country.
+              Please select a valid option.
             </div>
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mb-3">
-            <label for="firstName">Unit Price</label>
-            <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+            <label for="unitPrice">Unit Price</label>
+            <input type="number" class="form-control" id="unitPrice" placeholder="" value="0.0" required="">
             <div class="invalid-feedback">
-              Valid first name is required.
+              Valid unit value is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
-            <label for="lastName">Date Supplied</label>
-            <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+            <label for="supplyDate">Date Supplied</label>
+            <input type="text" class="form-control" id="supplyDate" placeholder="yyyy-mm-dd" value="" required="">
             <div class="invalid-feedback">
-              Valid last name is required.
+              Valid date is required.
             </div>
           </div>
         </div>
         <button type="button" class="btn btn-outline-info pdt_btn">Add Product</button>
-          
-          <button type="button" class="btn btn-outline-warning pdt_btn">Cancel</button>
-          <button type="button" class="btn btn-outline-primary pdt_btn">Reset</button>
-          
+        <button type="button" class="btn btn-outline-warning pdt_btn">Cancel</button>
+        <button type="button" class="btn btn-outline-primary pdt_btn">Reset</button>
       </form>
-
     </div>
   </main>
 </body>
+
 </html>

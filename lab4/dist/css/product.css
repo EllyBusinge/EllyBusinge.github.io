@@ -23,3 +23,12 @@ code {
     float: right;
     margin-left: 20px;
 }
+
+.login_btn {
+    float: left;
+    margin-top: 10px;
+}
+
+.login {
+    margin-top: 30px;
+}
