@@ -1,0 +1,68 @@
+1.  Follow the instructions for the Decorate My Text lab (below) to practice using JavaScript with the DOM.
+
+http://mumstudents.org/cs472/2016-03-AS-KL/Labs/Lab06-decoratemytext.php
+
+When you are finished upload your code to your website and include a link to it on your home page.  In Sakai submit a link to your home page.  Also be sure to include some comment about something you learned in the lab or some difficulty you had to resolve, etc. 
+
+You should include the verification links on your html page. 
+
+1.    JavaScript must be in a .js file.
+
+2.    window.onload = function(){
+    "use strict";
+    // put all of your code here
+
+    }
+
+3.    (Optional) Use a linter JSHint or ESLint
+
+IntelliJ > File > Setting > Languages&Frameworks > JavaScript > Code Quality Tools > JSHint
+ - check 'enable'
+ - scroll down to Environments and check 'Browser' and 'Development' and 'Mocha'
+ 
+ Below is an example of a js file setup to run on IntelliJ with JSHint.  The comment at the top line will
+ tell jsHint to recognize JS6 keywords like const and let.  It must be on the first line of the file.
+ 
+ /*jshint esversion: 6 */
+window.onload = function () {
+    const okButton1 = document.getElementById("ok1");
+    okButton1.onclick = okayClick;
+
+    const okButton2 = document.getElementById("ok2");
+    okButton2.onclick = function () {
+        alert("OK2 clicked");
+    };
+
+    document.getElementById("ok3").onclick = function () {
+        alert("OK3 clicked");
+    };
+
+    function okayClick() {
+        alert("OK1 clicked");
+    }
+};
+
+Grading Rubric for W1D6 lab -- decorate my text
+
+10 points
+
+home page has link to Decorate
+For Decorate
+
+should use a JavaScript file set up as instructed with window.onload and "use strict"
+should use unobtrusive JavaScript and styling
+should have the 3 verifiers (validator links)
+basic functionality should work
+good comment
+
+9 points
+missing one of above
+
+8 points
+missing 2 of above
+
+7 points
+missing 3 of the above
+
+EC  for appropriate use of one or more of map, filter, reduce, forEach, for in, for of, ...operator, arrow functions
+You must describe the use of each in your comment to receive EC.
