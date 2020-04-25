@@ -1,7 +1,10 @@
 //console.log("Result - " + max(6, 6));
 //console.log("Result - " + maxOfThree(6, 6, 8));
 //console.log("Result - " + isVowel('u'));
-console.log("Result - " + reverse('utttrrryuiw'));
+//console.log("Result - " + reverse('utttrrryuiw'));
+
+let inputArr = ['ELLY', 'Tests', 'one', 'e']
+console.log("Result - " + findLongestWord(inputArr));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -58,4 +61,11 @@ function reverse(input) {
         result += input[i]; 
     }
     return result;
+}
+
+function findLongestWord(inputArray) {
+    var longestWord = inputArray.reduce(function(longest, currentWord) {
+        return currentWord.length > longest.length ? currentWord : longest;
+    }, "");
+    return longestWord;
 }
