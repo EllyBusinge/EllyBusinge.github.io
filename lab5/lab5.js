@@ -1,5 +1,7 @@
 //console.log("Result - " + max(6, 6));
-console.log("Result - " + maxOfThree(6, 6, 8));
+//console.log("Result - " + maxOfThree(6, 6, 8));
+console.log("Result - " + isVowel('u'));
+
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
  * @param {*} number1 First number
@@ -26,5 +28,21 @@ function maxOfThree(number1, number2, number3) {
         return number2;
     } else {
         return number3;
+    }
+}
+
+/**
+ * Returns true if input character is a vowel or otherwise false
+ * @param {*} input Input character to be checked
+ */
+function isVowel(input) {
+    let vowels = ['a', 'e', 'i', 'o', 'u' ];
+
+    for (let index = 0; index < vowels.length; index++) {
+        if (vowels[index] == input) {
+            return true;
+        } else {
+            return false;
+        }        
     }
 }
