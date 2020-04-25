@@ -15,8 +15,10 @@
 //let inputArr = [19, 9, 11, 0, 12]
 //console.log("Result - " + findSecondBiggest(inputArr));
 
-console.log("Result - " + fibonacci(10, 0, 1));
+//console.log("Result - " + fibonacci(10, 0, 1));
 
+let inputArr = ['Elly', 'av', 'xxx', 'bbbbf', 'ff', 'f', 'ttt']
+console.log("Result - " + filterLongWords(inputArr, 4));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -126,19 +128,6 @@ function findSecondBiggest(inputArray) {
     return secondLargest;
 }
 
-
-function printFibo(length, start, end) {
-    
-}
-
-// function fib(n){
-//     let arr = [0, 1];
-//     for (let i = 2; i < n + 1; i++){
-//       arr.push(arr[i - 2] + arr[i -1]);
-//     }
-//    return arr;
-// }
-
 function fibonacci(n, a, b) {
     var result = [];
     var n1 = 0;
@@ -159,5 +148,15 @@ function fibonacci(n, a, b) {
             result.push(n3);
         }
     } 
+    return result;
+}
+
+function filterLongWords(inputArray, stringLength) {
+    var result = [];
+    for (var i = 0; i < inputArray.length; i++) { 
+        if (inputArray[i].length > stringLength) {
+            result.push(inputArray[i]);
+        } 
+    }
     return result;
 }
