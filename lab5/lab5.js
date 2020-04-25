@@ -12,8 +12,11 @@
 //let inputArr = [1, 2, 3, 4, 5]
 //console.log("Result - " + computeSumOfSquaresOfEvensOnly(inputArr));
 
-let inputArr = [19, 9, 11, 0, 12]
-console.log("Result - " + findSecondBiggest(inputArr));
+//let inputArr = [19, 9, 11, 0, 12]
+//console.log("Result - " + findSecondBiggest(inputArr));
+
+console.log("Result - " + fibonacci(10, 0, 1));
+
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -126,4 +129,35 @@ function findSecondBiggest(inputArray) {
 
 function printFibo(length, start, end) {
     
+}
+
+// function fib(n){
+//     let arr = [0, 1];
+//     for (let i = 2; i < n + 1; i++){
+//       arr.push(arr[i - 2] + arr[i -1]);
+//     }
+//    return arr;
+// }
+
+function fibonacci(n, a, b) {
+    var result = [];
+    var n1 = 0;
+    var n2 = 1;
+    if (n == 1 && a == 0 && b == 1) {
+        result.push(n1);
+    } else if (n >= 2) {
+        result.push(n1);
+        result.push(n2);
+    } 
+
+    for(let i = 2; i < n; ++i) {    
+        let n3 = n1 + n2;       
+        n1=n2;    
+        n2=n3; 
+        
+        if (n3 >= a && n3 >= b) {
+            result.push(n3);
+        }
+    } 
+    return result;
 }
