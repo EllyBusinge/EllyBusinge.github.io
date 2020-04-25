@@ -32,3 +32,16 @@ code {
 .login {
     margin-top: 30px;
 }
+
+#navbarCollapse li {
+    border-right: 2px solid #fff;
+}
+
+#navbarCollapse li:last-child {
+    border-right: none
+}
+
+a {
+    padding-left: 30px !important;
+    padding-right: 35px !important;
+}
