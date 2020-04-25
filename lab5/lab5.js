@@ -63,6 +63,10 @@ function reverse(input) {
     return result;
 }
 
+/**
+ * Returns longest word in an array
+ * @param {*} inputArray Input Array
+ */
 function findLongestWord(inputArray) {
     var longestWord = inputArray.reduce(function(longest, currentWord) {
         return currentWord.length > longest.length ? currentWord : longest;
