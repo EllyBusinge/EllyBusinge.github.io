@@ -3,8 +3,14 @@
 //console.log("Result - " + isVowel('u'));
 //console.log("Result - " + reverse('utttrrryuiw'));
 
-let inputArr = ['ELLY', 'Tests', 'one', 'e']
-console.log("Result - " + findLongestWord(inputArr));
+//let inputArr = ['ELLY', 'Tests', 'one', 'e'];
+//console.log("Result - " + findLongestWord(inputArr));
+
+//let inputArr = [1, 2, 3, 4, 5, 6]
+//printOddNumbersOnly(inputArr);
+
+let inputArr = [1, 2, 3, 4, 5]
+console.log("Result - " + computeSumOfSquaresOfEvensOnly(inputArr));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -72,4 +78,26 @@ function findLongestWord(inputArray) {
         return currentWord.length > longest.length ? currentWord : longest;
     }, "");
     return longestWord;
+}
+
+/**
+ * Prints odd numbers in a list only
+ * @param {*} inputArray input array
+ */
+function printOddNumbersOnly(inputArray) {
+    for (var i = inputArray.length - 1; i >= 0; i--) { 
+        if (inputArray[i] % 2 != 0) {
+            console.log("Odd Value - " + inputArray[i]);
+        } 
+    }
+}
+
+function computeSumOfSquaresOfEvensOnly(inputArray) {
+    let result = 0;
+    for (var i = inputArray.length - 1; i >= 0; i--) { 
+        if (inputArray[i] % 2 == 0) {
+            result += inputArray[i] * inputArray[i];
+        } 
+    }
+    return result;
 }
