@@ -1,6 +1,5 @@
 'use strict'; 
 
-
 //console.log("Result - " + max(6, 6));
 //console.log("Result - " + maxOfThree(6, 6, 8));
 //console.log("Result - " + isVowel('u'));
@@ -9,26 +8,30 @@
 //let inputArr = ['ELLY', 'Tests', 'one', 'e'];
 //console.log("Result - " + findLongestWord(inputArr));
 
-//let inputArr = [1, 2, 3, 4, 5, 6]
+//let inputArr = [1, 2, 3, 4, 5, 6];
 //printOddNumbersOnly(inputArr);
 
-//let inputArr = [1, 2, 3, 4, 5]
+//let inputArr = [1, 2, 3, 4, 5];
 //console.log("Result - " + computeSumOfSquaresOfEvensOnly(inputArr));
 
-//let inputArr = [19, 9, 11, 0, 12]
-//console.log("Result - " + findSecondBiggest(inputArr));
+let inputArr = [19, 9, 11, 0, 12];
+console.log("Result - " + findSecondBiggest(inputArr));
 
 //console.log("Result - " + fibonacci(10, 0, 1));
 
 //let inputArr = ['Elly', 'av', 'xxx', 'bbbbf', 'ff', 'f', 'ttt']
 //console.log("Result - " + filterLongWords(inputArr, 4));
 
-//let inputArr = [1, 2, 3, 4]
+//let inputArr = [1, 2, 3, 4];
 //console.log("Result - " + sum(inputArr));
 //console.log("Result - " + multiply(inputArr));
 
-let inputArr = [1, 2, 3]
-console.log("Result - " + computeSumOfSquares(inputArr));
+//let inputArr = [1, 2, 3];
+//console.log("Result - " + computeSumOfSquares(inputArr));
+
+//let inputArr = [1, 2, 3, 4];
+//console.log("Result - " + sum2(inputArr));
+//console.log("Result - " + multiply2(inputArr));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -122,8 +125,8 @@ function computeSumOfSquaresOfEvensOnly(inputArray) {
 
 
 function findSecondBiggest(inputArray) {
-    let largest = inputArray[0];
-    let secondLargest = inputArray[0];
+    let largest = -1;
+    let secondLargest = -1;
 
     for (var i = 0; i < inputArray.length; i++) { 
         if (inputArray[i] > largest) {
@@ -132,7 +135,6 @@ function findSecondBiggest(inputArray) {
 
         } else if (inputArray[i] > secondLargest && inputArray[i] != largest) {
             secondLargest = inputArray[i];
-
         }
     }    
     return secondLargest;
@@ -190,4 +192,12 @@ function multiply(inputArray) {
 function computeSumOfSquares(inputArray) {
     var sum = inputArray.map(x => x * x).reduce((x, y) => x + y);
     return sum;
+}
+
+function sum2(inputArray) {
+    return inputArray.reduce((x, y) => x + y);
+}
+
+function multiply2(inputArray) {
+    return inputArray.reduce((x, y) => x * y);
 }
