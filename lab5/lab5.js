@@ -1,6 +1,7 @@
 //console.log("Result - " + max(6, 6));
 //console.log("Result - " + maxOfThree(6, 6, 8));
-console.log("Result - " + isVowel('u'));
+//console.log("Result - " + isVowel('u'));
+console.log("Result - " + reverse('utttrrryuiw'));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -45,4 +46,16 @@ function isVowel(input) {
             return false;
         }        
     }
+}
+
+/**
+ * Reverses an input string
+ * @param {*} input Input string
+ */
+function reverse(input) {
+    var result = "";
+    for (var i = input.length - 1; i >= 0; i--) { 
+        result += input[i]; 
+    }
+    return result;
 }
