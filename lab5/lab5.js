@@ -1,3 +1,6 @@
+'use strict'; 
+
+
 //console.log("Result - " + max(6, 6));
 //console.log("Result - " + maxOfThree(6, 6, 8));
 //console.log("Result - " + isVowel('u'));
@@ -17,8 +20,15 @@
 
 //console.log("Result - " + fibonacci(10, 0, 1));
 
-let inputArr = ['Elly', 'av', 'xxx', 'bbbbf', 'ff', 'f', 'ttt']
-console.log("Result - " + filterLongWords(inputArr, 4));
+//let inputArr = ['Elly', 'av', 'xxx', 'bbbbf', 'ff', 'f', 'ttt']
+//console.log("Result - " + filterLongWords(inputArr, 4));
+
+//let inputArr = [1, 2, 3, 4]
+//console.log("Result - " + sum(inputArr));
+//console.log("Result - " + multiply(inputArr));
+
+let inputArr = [1, 2, 3]
+console.log("Result - " + computeSumOfSquares(inputArr));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -159,4 +169,25 @@ function filterLongWords(inputArray, stringLength) {
         } 
     }
     return result;
+}
+
+function sum(inputArray) {
+    var sum = 0;
+    for (var i = 0; i < inputArray.length; i++) { 
+        sum += inputArray[i];
+    }
+    return sum;
+}
+
+function multiply(inputArray) {
+    var sum = 1;
+    for (var i = 0; i < inputArray.length; i++) { 
+        sum *= inputArray[i];
+    }
+    return sum;
+}
+
+function computeSumOfSquares(inputArray) {
+    var sum = inputArray.map(x => x * x).reduce((x, y) => x + y);
+    return sum;
 }
