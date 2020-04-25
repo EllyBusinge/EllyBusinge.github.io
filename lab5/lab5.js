@@ -9,8 +9,11 @@
 //let inputArr = [1, 2, 3, 4, 5, 6]
 //printOddNumbersOnly(inputArr);
 
-let inputArr = [1, 2, 3, 4, 5]
-console.log("Result - " + computeSumOfSquaresOfEvensOnly(inputArr));
+//let inputArr = [1, 2, 3, 4, 5]
+//console.log("Result - " + computeSumOfSquaresOfEvensOnly(inputArr));
+
+let inputArr = [19, 9, 11, 0, 12]
+console.log("Result - " + findSecondBiggest(inputArr));
 
 /**
  * Max takes in two numbers and returns the biggest of the two numbers
@@ -100,4 +103,27 @@ function computeSumOfSquaresOfEvensOnly(inputArray) {
         } 
     }
     return result;
+}
+
+
+function findSecondBiggest(inputArray) {
+    let largest = inputArray[0];
+    let secondLargest = inputArray[0];
+
+    for (var i = 0; i < inputArray.length; i++) { 
+        if (inputArray[i] > largest) {
+            secondLargest = largest;
+            largest = inputArray[i];
+
+        } else if (inputArray[i] > secondLargest && inputArray[i] != largest) {
+            secondLargest = inputArray[i];
+
+        }
+    }    
+    return secondLargest;
+}
+
+
+function printFibo(length, start, end) {
+    
 }
