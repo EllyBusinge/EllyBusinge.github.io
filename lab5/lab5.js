@@ -33,9 +33,9 @@
 //let inputArr = [1, 2, 3];
 //console.log("Result - " + computeSumOfSquares(inputArr));
 
-//let inputArr = [1, 2, 3, 4];
-//console.log("Result - " + sum2(inputArr));
-//console.log("Result - " + multiply2(inputArr));
+let inputArr = [1, 2, 3, 4];
+console.log("Result - " + sum2(inputArr));
+console.log("Result - " + multiply2(inputArr));
 
 /**
  * Solution no. 1
