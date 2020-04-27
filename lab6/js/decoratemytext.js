@@ -1,6 +1,7 @@
 
 function displayAlert(){
-    alert("Hello, world!");
+    var textAreaBox = document.getElementById("txt1");
+    textAreaBox.className = "biggerDeco";
 }
 
 window.onload = function() {

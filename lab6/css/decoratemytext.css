@@ -24,5 +24,10 @@ legend {
 
 textarea {
 	font-family: monospace;
-	font-size: 12pt;
+    font-size: 12pt;
+    text-align: right;
+}
+
+.biggerDeco {
+	font-size: 24pt;
 }
