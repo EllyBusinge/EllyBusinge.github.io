@@ -2,8 +2,11 @@
 
 function setTxtFont(){
     let textAreaBox = document.getElementById("txt1");
-    //textAreaBox.className = "biggerDeco";
     textAreaBox.style.fontSize = getCurrentFontSize() + 2 + "pt";
+}
+
+function increaseTxtFont() {
+    let timer = setInterval(setTxtFont, 500);
 }
 
 function displayBling(){
@@ -32,7 +35,8 @@ function getCurrentFontSize() {
 
 window.onload = function() {
     let button = document.getElementById("biggerDeco");
-    button.onclick = setTxtFont;
+    //button.onclick = setTxtFont;
+    button.onclick = increaseTxtFont;
 
     let checkbox = document.getElementById("chkbx");
     checkbox.onclick = displayBling;
