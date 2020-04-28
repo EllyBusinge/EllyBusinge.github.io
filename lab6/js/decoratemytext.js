@@ -1,18 +1,30 @@
 "use strict;"
+/**
+ * Author Elly - Businge
+ */
 
+/**
+ * Sets font size
+ */
 function setTxtFont(){
     let textAreaBox = document.getElementById("txt1");
 
     let currentFont = getCurrentFontSize();
-    if (currentFont < 30) {
+    if (currentFont < 60) {
         textAreaBox.style.fontSize = getCurrentFontSize() + 2 + "pt";
     }
 }
 
+/**
+ * Implements a timer that increases the font every 500ms
+ */
 function increaseTxtFont() {
     let timer = setInterval(setTxtFont, 500);
 }
 
+/**
+ * Displays bling decoration when bling button is clicked
+ */
 function displayBling(){
     let checkbox = document.getElementById("chkbx");
     let textAreaBox = document.getElementById("txt1");
@@ -30,6 +42,9 @@ function displayBling(){
     }
 }
 
+/**
+ * Returns current font size of the text
+ */
 function getCurrentFontSize() {
     let fontSize = window.getComputedStyle(document
         .getElementById("txt1"), null)
@@ -37,6 +52,9 @@ function getCurrentFontSize() {
     return parseInt(fontSize);
 }
 
+/**
+ * Converts text to Pig Latin
+ */
 function convertToPigLatin() {
     let allLines = document.getElementById("txt1").value.trim().split("\n");
     let newText = "";
@@ -58,6 +76,9 @@ function convertToPigLatin() {
     document.getElementById("txt1").value = newText;
 }
 
+/**
+ * Converts text to Malkovitch
+ */
 function convertToMalkovitch() {
     let allLines = document.getElementById("txt1").value.trim().split("\n");
     let newText = "";
