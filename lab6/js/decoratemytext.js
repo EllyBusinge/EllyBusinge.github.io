@@ -2,7 +2,11 @@
 
 function setTxtFont(){
     let textAreaBox = document.getElementById("txt1");
-    textAreaBox.style.fontSize = getCurrentFontSize() + 2 + "pt";
+
+    let currentFont = getCurrentFontSize();
+    if (currentFont < 30) {
+        textAreaBox.style.fontSize = getCurrentFontSize() + 2 + "pt";
+    }
 }
 
 function increaseTxtFont() {
@@ -33,11 +37,56 @@ function getCurrentFontSize() {
     return parseInt(fontSize);
 }
 
+function convertToPigLatin() {
+    let allLines = document.getElementById("txt1").value.trim().split("\n");
+    let newText = "";
+    let newLine;
+    let vowels = "aeiouAEIOU";
+    for (let line of allLines) {
+        let words = line.trim().split(" ");
+        for (let i in words) {
+            if (!words[i].localeCompare(" ") && vowels.indexOf(words[i].charAt(0))>-1) {
+                words[i] = (words[i].substring(1) + words[i].charAt(0) + "ay");
+            }
+            else {
+                words[i] += "ay";
+            }
+        }
+        newLine = words.join(" ") + "\n";
+        newText += newLine;
+    }
+    document.getElementById("txt1").value = newText;
+}
+
+function convertToMalkovitch() {
+    let allLines = document.getElementById("txt1").value.trim().split("\n");
+    let newText = "";
+    let newLine;
+    for (let line of allLines) {
+        let words = line.split(" ");
+        newLine = "";
+        for (let i in words) {
+            if (words[i].length >= 5) {
+                words[i] = "Malkovich";
+            }
+        }
+        newLine = words.join(" ") + "\n";
+        newText += newLine;
+    }
+    document.getElementById("txt1").value = newText;
+}
+
 window.onload = function() {
-    let button = document.getElementById("biggerDeco");
-    //button.onclick = setTxtFont;
-    button.onclick = increaseTxtFont;
+    let biggerDeco = document.getElementById("biggerDeco");
+    //biggerDeco.onclick = setTxtFont;
+    biggerDeco.onclick = increaseTxtFont;
 
     let checkbox = document.getElementById("chkbx");
     checkbox.onclick = displayBling;
+
+    let pigLatin = document.getElementById("pigLatin");
+    pigLatin.onclick = convertToPigLatin;
+
+    let malkovitch = document.getElementById("malkovitch");
+    malkovitch.onclick = convertToMalkovitch;
 }
