@@ -31,3 +31,13 @@ textarea {
 button {
 	margin-bottom: 5px;
 }
+
+a.validator {
+    float: right;
+}
+
+.validator_div {
+	position: relative;
+	margin-top: 5px;
+    float: right;
+}
