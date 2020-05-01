@@ -3,10 +3,10 @@
 const person = {
     name : "",
     dateOfBirth : "",
-    getPersonName : function() {
+    getName : function() {
         return this.name;
     },
-    setPersonName : function(newName) {
+    setName : function(newName) {
         this.name = newName;
     },
     toString : function() {
@@ -17,6 +17,21 @@ const person = {
 }
 
 const john = Object.create(person);
-john.setPersonName("John");
+john.setName("John");
 john.dateOfBirth = "December 10, 1998";
-console.log(john.toString());
+//console.log(john.toString());
+
+//Number 2
+const employee = {
+    __proto__: person,
+    salary : "",
+    hireDate : new Date(),
+    doJob : function(jobTitle) {
+        console.log(`${this.getName()} is a ${jobTitle} who earns $${this.salary}`);
+    }
+}
+
+const anna = Object.create(employee);
+anna.setName("Anna");
+anna.salary = "249,995.50";
+anna.doJob("Programmer");
