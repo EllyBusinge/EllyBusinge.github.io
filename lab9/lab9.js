@@ -11,16 +11,19 @@ const person = {
         this.name = newName;
     },
     toString : function() {
-        let date = Date.parse(this.dateOfBirth);
-        let dob = new Date(date * 1000);
-        return `The person’s name is ${this.name} \nJohn was born on ${dob.getUTCFullYear()}-${dob.getMonth()}-${dob.getDate()}`;
+        return `The person’s name is ${this.name} \nJohn was born on ${this.dateOfBirth}`;
     }
 }
 
 const john = Object.create(person);
 john.setName("John");
-john.dateOfBirth = "December 10, 1998";
-//console.log(john.toString());
+john.dateOfBirth = "1998-12-10";
+console.log(john.toString());
+
+const peter = Object.create(person);
+peter.setName("Peter");
+peter.dateOfBirth = "1985-11-10";
+console.log(peter.toString());
 
 //Number 2
 const employee = {
