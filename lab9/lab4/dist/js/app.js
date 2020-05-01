@@ -10,9 +10,9 @@ $(document).ready(function(){
  * @param {*} event 
  */
 function processLoginForm(event) {
-    console.log($("#emailAddress").val());
-    console.log($("#url").val());
-    console.log($("#password").val());
+    console.log("Email Address - " + $("#emailAddress").val());
+    console.log("URL - " + $("#url").val());
+    console.log("Password - " + $("#password").val());
     event.preventDefault();
 }
 
