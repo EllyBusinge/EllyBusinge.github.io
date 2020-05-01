@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Elly Businge">
+  <title>MUM Golden Dome Market</title>
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <link href="dist/css/product.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column h-100" cz-shortcut-listen="true">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color:deepskyblue;">
+      <span style="margin-right: 15px;color: white;">MUM Golden Dome Market : : : SRM System</span>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="supplier.html">Suppliers</a>
+          </li>
+        </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <span style="margin-right: 15px;color: white;">Hello!</span>
+          <button class="btn btn-light my-2 my-sm-0" type="submit">Sign Out</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main" class="flex-shrink-0">
+    <div class="container">
+      <h3 class="mt-5">New Product Form</h3>
+      <form method="GET" action="#">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="productNumber">Product Number</label>
+            <input type="number" class="form-control" id="productNumber" placeholder="Product Number" value="" 
+            title="Only digits allowed in product number" required pattern="\d+">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="quantity">Quantity In Stock</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Quantity In Stock" 
+            title="Only digits allowed as quantity" value="0" required pattern="\d+">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="productName">Name</label>
+            <input type="text" class="form-control" id="productName" placeholder="Product Name" value="" 
+            title="Incorrect input value" pattern="\D+" required>
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label for="supplier">Supplier</label>
+            <select class="custom-select d-block w-100" id="supplier" required>
+              <option value="">Select a supplier</option>
+              <option>John</option>
+              <option>James</option>
+              <option>Elly</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="unitPrice">Unit Price</label>
+            <input type="number" class="form-control" id="unitPrice" placeholder="" value="0.0" 
+            title="Only digits allowed as unit price" required pattern="^[-+]?[0-9]*\.?[0-9]+$">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="supplyDate">Date Supplied</label>
+            <input type="text" class="form-control" id="supplyDate" placeholder="yyyy-mm-dd" 
+            title="Dates should be in the range 2019-01-01 upto 2022-04-24" value="" min="2019-01-01" max="2022-04-24" required>
+          </div>
+        </div>
+        <input class="btn btn-outline-info pdt_btn" type="submit" value="Add Product">
+        <!-- <button type="button" class="btn btn-outline-info pdt_btn">Add Product</button> -->
+        <button type="button" class="btn btn-outline-warning pdt_btn">Cancel</button>
+        <button type="button" class="btn btn-outline-primary pdt_btn">Reset</button>
+      </form>
+    </div>
+  </main>
+</body>
+<script src="dist/js/bootstrap.min.js"></script>
+</html>
