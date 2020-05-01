@@ -35,3 +35,18 @@ const anna = Object.create(employee);
 anna.setName("Anna");
 anna.salary = "249,995.50";
 anna.doJob("Programmer");
+
+// Number 3
+function Person(name, dateOfBirth) {
+    this.name = name;
+    this.dateOfBirth = dateOfBirth;
+}
+
+var myPerson = new Person("John", "1998-12-10");
+
+// Add a name method to the person
+myPerson.toString = function() {
+  return `{Name: ${this.name}, DateOfBirth: ${this.dateOfBirth}}`;
+};
+
+console.log(myPerson.toString());
