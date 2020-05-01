@@ -1,0 +1,5 @@
+Solution to number 7
+The free variable is counter. It is not declared locally nor passed to the function as a parameter.
+
+Solution to number 9
+The Module Pattern can be used to organize the functions and variable declarations.

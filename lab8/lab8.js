@@ -42,6 +42,7 @@ function makeAdder(inc) {
 
 /**
  * Solution to number 9
+ * The Module Pattern can be used to organize the functions and variable declarations.
  */
 
  /**
