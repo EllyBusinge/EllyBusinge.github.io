@@ -1,7 +1,0 @@
-INDEX VERSION 1.4+D:\School\WAP\CS472_Labs\lab10\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3987265738.index
-3865721825.index
-676243315.index
-3064576507.index
-299476972.index
-4150351424.index

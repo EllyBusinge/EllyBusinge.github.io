@@ -1,3 +1,0 @@
-INDEX VERSION 1.130
-D:\School\WAP\CS472_Labs\lab10\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1892753371.index
-\Lab10\src\main\resources
