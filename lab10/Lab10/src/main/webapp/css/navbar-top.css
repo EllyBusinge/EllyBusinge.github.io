@@ -2,3 +2,14 @@
 body {
   min-height: 75rem;
 }
+
+.nav_style {
+	background-color: deepskyblue !important;
+	margin-bottom: 0px !important;
+}
+
+.btn_search {
+	color: white !important;
+    border-color: black !important;
+    background-color: black !important;
+}
