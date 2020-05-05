@@ -1,6 +1,7 @@
 package org.miu.Lab10;
 
 import java.io.IOException;
+import java.util.Optional;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,24 +9,48 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/contactUs")
-public class ContactUsServlet extends HttpServlet {
+@WebServlet("/processData")
+public class DataHandlerServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-			throws ServletException, IOException {
-		sendResponse(response);
-	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		sendResponse(response);
+		processRequest(request, response);
 	}
 	
-	private void sendResponse(HttpServletResponse response) throws IOException {
+	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		Optional<String> fullName = Optional.ofNullable(request.getParameter("fullName"));
+		Optional<String> gender = Optional.ofNullable(request.getParameter("radioGender"));
+		Optional<String> category = Optional.ofNullable(request.getParameter("category"));
+		Optional<String> message = Optional.ofNullable(request.getParameter("message"));
+		
+		StringBuffer errorBuffer = new StringBuffer();
+		
+		if (fullName.isPresent()) {System.out.println("Here !!!!! 1");} else {
+			errorBuffer.append("<p class=\"error_msg\">Name is missing.</p>"); 
+			System.out.println("Here !!!!! 2");
+		}
+		
+		if (gender.isPresent()) {System.out.println("Here !!!!! 3");} else {
+			errorBuffer.append("<p class=\"error_msg\">Gender is missing.</p>"); 
+			System.out.println("Here !!!!! 4");
+		}
+		
+		if (category.isPresent()) {} else {
+			errorBuffer.append("<p class=\"error_msg\">Category is missing.</p>"); 
+		}
+		
+		if (message.isPresent()) {} else {
+			errorBuffer.append("<p class=\"error_msg\">Message is missing.</p>"); 
+		}
+		System.out.println("Here !!!!! " + errorBuffer.toString());
+		sendResponse(response, errorBuffer.toString());
+	}
+	
+	private void sendResponse(HttpServletResponse response, String errorMessage) throws IOException {
 		response.setContentType("text/html");
 			
 		String html = "<!DOCTYPE html>\r\n" + 
@@ -52,7 +77,7 @@ public class ContactUsServlet extends HttpServlet {
 				"      <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\r\n" + 
 				"        <ul class=\"navbar-nav mr-auto\">\r\n" + 
 				"          <li class=\"nav-item active\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"helloServlet\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
+				"            <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
 				"          </li>\r\n" + 
 				"          <li class=\"nav-item\">\r\n" + 
 				"            <a class=\"nav-link\" href=\"#\">About</a>\r\n" + 
@@ -71,7 +96,8 @@ public class ContactUsServlet extends HttpServlet {
 				"    <main role=\"main\" class=\"container\">\r\n" + 
 				"      <div style=\"padding-top: 1em;\" class=\"container\">\r\n" + 
 				"            <h5>Customer Contact Form</h5>\r\n" + 
-				"			\r\n" + 
+				"			<div class=\"col-md-12\">\r\n" + errorMessage +
+				"			</div>\r\n" + 
 				"            <form id=\"contactUsForm\" method=\"post\" action=\"processData\">\r\n" + 
 				"                <fieldset>\r\n" + 
 				"                    <legend></legend>\r\n" + 
@@ -130,6 +156,15 @@ public class ContactUsServlet extends HttpServlet {
 				"							</div>\r\n" + 
 				"						</div>\r\n" + 
 				"                    </div>\r\n" + 
+				"					\r\n" + 
+				"					<div class=\"row\">\r\n" + 
+				"						<div class=\"col-md-6\">\r\n" + 
+				"							<span>Hit count for the page:</span><span>21</span>\r\n" + 
+				"						</div>\r\n" + 
+				"						<div class=\"col-md-6\">\r\n" + 
+				"							<span class=\"span_style\">21</span><span class=\"span_style\">Total Hit count for the entire WebApp:</span>\r\n" + 
+				"						</div>\r\n" + 
+				"					</div>\r\n" + 
 				"                </fieldset>\r\n" + 
 				"            </form>           \r\n" + 
 				"        </div>\r\n" + 
