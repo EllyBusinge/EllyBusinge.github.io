@@ -27,10 +27,8 @@ public class HelloServlet extends HttpServlet {
 	
 	private void sendResponse(HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
-		response.getWriter().write("Hello Java Servlet 4.0");
-		
+			
 		String html = "<!DOCTYPE html>\r\n" + 
-				"<!-- saved from url=(0057)https://getbootstrap.com/docs/4.0/examples/navbar-static/ -->\r\n" + 
 				"<html lang=\"en\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n" + 
 				"    \r\n" + 
 				"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\r\n" + 
@@ -38,15 +36,15 @@ public class HelloServlet extends HttpServlet {
 				"    <meta name=\"author\" content=\"\">\r\n" + 
 				"    <link rel=\"icon\" href=\"https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico\">\r\n" + 
 				"\r\n" + 
-				"    <title>Top navbar example for Bootstrap</title>\r\n" + 
+				"    <title>Lab10 Solution</title>\r\n" + 
 				"\r\n" + 
 				"    <link rel=\"canonical\" href=\"https://getbootstrap.com/docs/4.0/examples/navbar-static/\">\r\n" + 
 				"\r\n" + 
 				"    <!-- Bootstrap core CSS -->\r\n" + 
-				"    <link href=\"./css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
+				"    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
 				"\r\n" + 
 				"    <!-- Custom styles for this template -->\r\n" + 
-				"    <link href=\"./css/navbar-top.css\" rel=\"stylesheet\">\r\n" + 
+				"    <link href=\"css/navbar-top.css\" rel=\"stylesheet\">\r\n" + 
 				"  </head>\r\n" + 
 				"\r\n" + 
 				"  <body cz-shortcut-listen=\"true\">\r\n" + 
@@ -86,12 +84,11 @@ public class HelloServlet extends HttpServlet {
 				"    <!-- Bootstrap core JavaScript\r\n" + 
 				"    ================================================== -->\r\n" + 
 				"    <!-- Placed at the end of the document so the pages load faster -->\r\n" + 
-				"    <script src=\"./css/jquery-3.2.1.slim.min.js.download\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\r\n" + 
+				"    <script src=\"js/jquery-3.2.1.slim.min.js.download\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\r\n" + 
 				"    <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery-slim.min.js\"><\\/script>')</script>\r\n" + 
-				"    <script src=\"./css/popper.min.js.download\"></script>\r\n" + 
-				"    <script src=\"./css/bootstrap.min.js.download\"></script>\r\n" + 
-				"  \r\n" + 
-				"\r\n" + 
+				"    <script src=\"js/popper.min.js.download\"></script>\r\n" + 
+				"    <script src=\"js/bootstrap.min.js\"></script>\r\n" + 
 				"</body></html>";
+		response.getWriter().write(html);
 	}
 }
