@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/helloServlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet("/successServlet")
+public class SuccessServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -36,7 +36,7 @@ public class HelloServlet extends HttpServlet {
 				"    <meta name=\"author\" content=\"Elly Businge\">\r\n" + 
 				"	<link type=\"text/css\" rel=\"shortcut icon\" href=\"images/favicon.ico\"/>\r\n" + 
 				"\r\n" + 
-				"    <title>Lab10 - Part 1</title>\r\n" + 
+				"    <title>Lab10 - Part 2</title>\r\n" + 
 				"\r\n" + 
 				"    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
 				"\r\n" + 
@@ -53,7 +53,7 @@ public class HelloServlet extends HttpServlet {
 				"      <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\r\n" + 
 				"        <ul class=\"navbar-nav mr-auto\">\r\n" + 
 				"          <li class=\"nav-item active\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
+				"            <a class=\"nav-link\" href=\"helloServlet\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
 				"          </li>\r\n" + 
 				"          <li class=\"nav-item\">\r\n" + 
 				"            <a class=\"nav-link\" href=\"#\">About</a>\r\n" + 
@@ -70,14 +70,27 @@ public class HelloServlet extends HttpServlet {
 				"    </nav>\r\n" + 
 				"\r\n" + 
 				"    <main role=\"main\" class=\"container\">\r\n" + 
-				"      <div class=\"jumbotron\">\r\n" + 
-				"        <h1>Hello, world of HttpServlet 4.0!</h1>\r\n" + 
-				"		<h4>Welcome to Lab 10</h4>\r\n" + 
-				"        <p class=\"lead\">This is a simple hero unit, a simple jumbtron-style component for calling extra attention to featured content or information.</p>\r\n" + 
-				"		<hr/>\r\n" + 
-				"		<p>It uses utility classes for typography and spacing to space content out within the target container</p>\r\n" + 
-				"        <a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">Learn More</a>\r\n" + 
-				"      </div>\r\n" + 
+				"		<div class=\"card\">\r\n" + 
+				"			<div class=\"card-header\">\r\n" + 
+				"				<h4>Thank you! Your message has been received as follows:</h4>\r\n" + 
+				"			</div>\r\n" + 
+				"			<div class=\"card-body\">\r\n" + 
+				"				<h6>Name: Elly Businge</h6>\r\n" + 
+				"				<p>Gender: Male</p>\r\n" + 
+				"				<p>Category: Feedback</p>\r\n" + 
+				"				<p class=\"card-text\">Message: I like this website alot. Please keep up the good work. Cheers</p>\r\n" + 
+				"				<p class=\"card-text\">Please feel free to <a href=\"contactUs\">Contact us</a> again</p>\r\n" + 
+				"			</div>\r\n" + 
+				"		</div>\r\n" + 
+				"		\r\n" + 
+				"		<div class=\"row\">\r\n" + 
+				"			<div class=\"col-md-6\">\r\n" + 
+				"							<span>Hit count for the page:</span><span>" + request.getServletContext().getAttribute("hitCount") + "</span>\r\n" + 
+				"			</div>\r\n" + 
+				"			<div class=\"col-md-6\">\r\n" + 
+				"				<span class=\"span_style\">21</span><span class=\"span_style\">Total Hit count for the entire WebApp:</span>\r\n" + 
+				"			</div>\r\n" + 
+				"		</div>\r\n" + 
 				"    </main>\r\n" + 
 				"	\r\n" + 
 				"	<footer>\r\n" + 

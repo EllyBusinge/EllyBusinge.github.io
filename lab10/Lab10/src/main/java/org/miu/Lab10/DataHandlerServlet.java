@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/processData")
 public class DataHandlerServlet extends HttpServlet {
@@ -51,6 +52,7 @@ public class DataHandlerServlet extends HttpServlet {
 			request.setAttribute("errorMsg", errorMessages.toString());
 			request.getRequestDispatcher("contactUs").forward(request, response);
 		} else {
+			HttpSession session = request.getSession(true);
 			response.sendRedirect("");
 		}
 	}
