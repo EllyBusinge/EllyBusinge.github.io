@@ -59,7 +59,7 @@ public class HelloServlet extends HttpServlet {
 				"            <a class=\"nav-link\" href=\"#\">About</a>\r\n" + 
 				"          </li>\r\n" + 
 				"          <li class=\"nav-item\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"#\">Contact Us</a>\r\n" + 
+				"            <a class=\"nav-link\" href=\"contactUs\">Contact Us</a>\r\n" + 
 				"          </li>\r\n" + 
 				"        </ul>\r\n" + 
 				"        <form class=\"form-inline mt-2 mt-md-0\">\r\n" + 
