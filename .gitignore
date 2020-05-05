@@ -3,6 +3,7 @@ HELP.md
 /labs/
 !.mvn/wrapper/maven-wrapper.jar
 /RemoteSystemsTempFiles/
+/.metadata/
 
 ### STS ###
 .apt_generated
