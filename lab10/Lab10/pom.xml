@@ -6,7 +6,7 @@
 	<artifactId>Lab10</artifactId>
 	<packaging>war</packaging>
 	<version>1.1-SNAPSHOT</version>
-	<name>Lab10 Maven Webapp</name>
+	<name>Lab10</name>
 	<url>http://maven.apache.org</url>
 	
 	<dependencies>
@@ -21,6 +21,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${javax.servlet-api.version}</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<build>
