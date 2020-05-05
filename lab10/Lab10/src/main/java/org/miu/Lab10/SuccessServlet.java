@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/successServlet")
 public class SuccessServlet extends HttpServlet {
@@ -28,6 +29,8 @@ public class SuccessServlet extends HttpServlet {
 	private void sendResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
 			
+		HttpSession session = request.getSession(true);
+		
 		String html = "<!DOCTYPE html>\r\n" + 
 				"<html lang=\"en\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n" + 
 				"    \r\n" + 
@@ -75,10 +78,10 @@ public class SuccessServlet extends HttpServlet {
 				"				<h4>Thank you! Your message has been received as follows:</h4>\r\n" + 
 				"			</div>\r\n" + 
 				"			<div class=\"card-body\">\r\n" + 
-				"				<h6>Name: Elly Businge</h6>\r\n" + 
-				"				<p>Gender: Male</p>\r\n" + 
-				"				<p>Category: Feedback</p>\r\n" + 
-				"				<p class=\"card-text\">Message: I like this website alot. Please keep up the good work. Cheers</p>\r\n" + 
+				"				<h6>Name: " + session.getAttribute("fullName") + "</h6>\r\n" + 
+				"				<p>Gender: " + session.getAttribute("gender") + "</p>\r\n" + 
+				"				<p>Category: " + session.getAttribute("category") + "</p>\r\n" + 
+				"				<p class=\"card-text\">Message: " + session.getAttribute("message") + "</p>\r\n" + 
 				"				<p class=\"card-text\">Please feel free to <a href=\"contactUs\">Contact us</a> again</p>\r\n" + 
 				"			</div>\r\n" + 
 				"		</div>\r\n" + 

@@ -53,7 +53,12 @@ public class DataHandlerServlet extends HttpServlet {
 			request.getRequestDispatcher("contactUs").forward(request, response);
 		} else {
 			HttpSession session = request.getSession(true);
-			response.sendRedirect("");
+			session.setAttribute("fullName", fullName.get());
+			session.setAttribute("gender", gender.get());
+			session.setAttribute("category", category.get());
+			session.setAttribute("message", message.get());
+			
+			response.sendRedirect("successServlet");
 		}
 	}
 }
