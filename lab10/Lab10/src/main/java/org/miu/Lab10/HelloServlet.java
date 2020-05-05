@@ -40,7 +40,7 @@ public class HelloServlet extends HttpServlet {
 				"\r\n" + 
 				"    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
 				"\r\n" + 
-				"    <link href=\"css/navbar-top.css\" rel=\"stylesheet\">\r\n" + 
+				"    <link href=\"css/custom.css\" rel=\"stylesheet\">\r\n" + 
 				"  </head>\r\n" + 
 				"\r\n" + 
 				"  <body cz-shortcut-listen=\"true\">\r\n" + 
@@ -79,6 +79,13 @@ public class HelloServlet extends HttpServlet {
 				"        <a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">Learn More</a>\r\n" + 
 				"      </div>\r\n" + 
 				"    </main>\r\n" + 
+				"	\r\n" + 
+				"	<footer>\r\n" + 
+				"        <div>\r\n" + 
+				"            <span style=\"margin-left: 1em;\">O. Kalu ::: CS472-WAP</span>\r\n" + 
+				"            <span style=\"float: right;margin-right: 1em;\">&copy; May 2020</span>\r\n" + 
+				"        </div>\r\n" + 
+				"    </footer>\r\n" + 
 				"\r\n" + 
 				"    <script src=\"js/jquery-3.2.1.slim.min.js.download\" integrity=\"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN\" crossorigin=\"anonymous\"></script>\r\n" + 
 				"    <script>window.jQuery || document.write('<script src=\"../../assets/js/vendor/jquery-slim.min.js\"><\\/script>')</script>\r\n" + 
