@@ -15,7 +15,7 @@ const person = {
     toString : function() {
         return `The person’s name is ${this.name} \nJohn was born on ${processDate(this.dateOfBirth)}`;
     }
-}
+};
 
 const john = Object.create(person);
 john.setName("John");
@@ -57,9 +57,12 @@ function Person(name, dateOfBirth) {
 var myPerson = new Person("Peter", "November 10, 1985");
 
 // Add a name method to the person
-myPerson.toString = function() {
-  return `{Name: ${this.name}, DateOfBirth: ${processDate(this.dateOfBirth)}}`;
-};
+Person.prototype.toString = function() {
+    return `{Name: ${this.name}, DateOfBirth: ${processDate(this.dateOfBirth)}}`;
+}
+// myPerson.toString = function() {
+//   return `{Name: ${this.name}, DateOfBirth: ${processDate(this.dateOfBirth)}}`;
+// };
 
 console.log("----------------------------------- Start Solution 3 ------------------------------");
 console.log(myPerson.toString());

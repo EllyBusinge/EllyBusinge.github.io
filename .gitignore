@@ -2,6 +2,7 @@ HELP.md
 /target/
 /labs/
 !.mvn/wrapper/maven-wrapper.jar
+/RemoteSystemsTempFiles/
 
 ### STS ###
 .apt_generated
