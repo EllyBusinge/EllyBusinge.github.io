@@ -52,7 +52,7 @@ public class ContactUsServlet extends HttpServlet {
 				"      <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\r\n" + 
 				"        <ul class=\"navbar-nav mr-auto\">\r\n" + 
 				"          <li class=\"nav-item active\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"helloServlet\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
+				"            <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
 				"          </li>\r\n" + 
 				"          <li class=\"nav-item\">\r\n" + 
 				"            <a class=\"nav-link\" href=\"#\">About</a>\r\n" + 
@@ -130,6 +130,15 @@ public class ContactUsServlet extends HttpServlet {
 				"							</div>\r\n" + 
 				"						</div>\r\n" + 
 				"                    </div>\r\n" + 
+				"					\r\n" + 
+				"					<div class=\"row\">\r\n" + 
+				"						<div class=\"col-md-6\">\r\n" + 
+				"							<span>Hit count for the page:</span><span>21</span>\r\n" + 
+				"						</div>\r\n" + 
+				"						<div class=\"col-md-6\">\r\n" + 
+				"							<span class=\"span_style\">21</span><span class=\"span_style\">Hit count for the entire WebApp:</span>\r\n" + 
+				"						</div>\r\n" + 
+				"					</div>\r\n" + 
 				"                </fieldset>\r\n" + 
 				"            </form>           \r\n" + 
 				"        </div>\r\n" + 
