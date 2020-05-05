@@ -30,3 +30,12 @@ footer {
 .error_msg {
 	color: red;
 }
+
+.card_style {
+	margin-top: 24px;
+}
+
+.date_style {
+	margin-top: 14px;
+	text-align: end;
+}

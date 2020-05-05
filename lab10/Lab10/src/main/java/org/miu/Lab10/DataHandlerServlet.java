@@ -1,6 +1,8 @@
 package org.miu.Lab10;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Optional;
 
 import javax.servlet.ServletException;
@@ -57,6 +59,10 @@ public class DataHandlerServlet extends HttpServlet {
 			session.setAttribute("gender", gender.get());
 			session.setAttribute("category", category.get());
 			session.setAttribute("message", message.get());
+			
+			Date dateToday = new Date();
+			SimpleDateFormat format = new SimpleDateFormat ("EEEE, dd MMM yyyy");
+			session.setAttribute("dateToday", format.format(dateToday));
 			
 			response.sendRedirect("successServlet");
 		}

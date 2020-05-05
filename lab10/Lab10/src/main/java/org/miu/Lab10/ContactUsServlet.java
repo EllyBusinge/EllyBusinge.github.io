@@ -27,8 +27,9 @@ public class ContactUsServlet extends HttpServlet {
 	
 	private void sendResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
-		
-		Object errorMessage = request.getAttribute("errorMsg");
+		String errorMessage = "";
+		if (request.getAttribute("errorMsg") != null)
+			errorMessage = (String)request.getAttribute("errorMsg");
 		
 		String html = "<!DOCTYPE html>\r\n" + 
 				"<html lang=\"en\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n" + 

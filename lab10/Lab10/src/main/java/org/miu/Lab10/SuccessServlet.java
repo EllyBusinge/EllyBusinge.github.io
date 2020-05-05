@@ -52,28 +52,12 @@ public class SuccessServlet extends HttpServlet {
 				"      <a class=\"navbar-brand\" href=\"#\">CS472-WAP ::: Lab10</a>\r\n" + 
 				"      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n" + 
 				"        <span class=\"navbar-toggler-icon\"></span>\r\n" + 
-				"      </button>\r\n" + 
-				"      <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\r\n" + 
-				"        <ul class=\"navbar-nav mr-auto\">\r\n" + 
-				"          <li class=\"nav-item active\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"helloServlet\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
-				"          </li>\r\n" + 
-				"          <li class=\"nav-item\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"#\">About</a>\r\n" + 
-				"          </li>\r\n" + 
-				"          <li class=\"nav-item\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"contactUs\">Contact Us</a>\r\n" + 
-				"          </li>\r\n" + 
-				"        </ul>\r\n" + 
-				"        <form class=\"form-inline mt-2 mt-md-0\">\r\n" + 
-				"          <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n" + 
-				"          <button class=\"btn btn-outline-success my-2 my-sm-0 btn_search\" type=\"submit\">Search</button>\r\n" + 
-				"        </form>\r\n" + 
-				"      </div>\r\n" + 
+				"      </button>\r\n" +  
 				"    </nav>\r\n" + 
 				"\r\n" + 
 				"    <main role=\"main\" class=\"container\">\r\n" + 
-				"		<div class=\"card\">\r\n" + 
+				"		<p class=\"date_style\">" + session.getAttribute("dateToday") + "</p>\r\n" + 
+				"		<div class=\"card card_style\">\r\n" + 
 				"			<div class=\"card-header\">\r\n" + 
 				"				<h4>Thank you! Your message has been received as follows:</h4>\r\n" + 
 				"			</div>\r\n" + 
