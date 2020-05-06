@@ -1,4 +1,4 @@
-package org.miu.Lab13;
+package org.miu.Lab13.controllers;
 
 import java.io.IOException;
 
@@ -7,12 +7,21 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-@WebServlet("/helloServlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet("/successServlet")
+public class SuccessServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
+	private int hitCount; 
+
+	@Override
+	public void init() throws ServletException {
+		hitCount = 0;
+		this.getServletContext().setAttribute("hitCount", hitCount);
+	}
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
@@ -28,6 +37,8 @@ public class HelloServlet extends HttpServlet {
 	private void sendResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
 			
+		HttpSession session = request.getSession(true);
+		this.getServletContext().setAttribute("hitCount", ++hitCount);
 		String html = "<!DOCTYPE html>\r\n" + 
 				"<html lang=\"en\"><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n" + 
 				"    \r\n" + 
@@ -36,7 +47,7 @@ public class HelloServlet extends HttpServlet {
 				"    <meta name=\"author\" content=\"Elly Businge\">\r\n" + 
 				"	<link type=\"text/css\" rel=\"shortcut icon\" href=\"images/favicon.ico\"/>\r\n" + 
 				"\r\n" + 
-				"    <title>Lab10 - Part 1</title>\r\n" + 
+				"    <title>Lab10 - Part 2</title>\r\n" + 
 				"\r\n" + 
 				"    <link href=\"css/bootstrap.min.css\" rel=\"stylesheet\">\r\n" + 
 				"\r\n" + 
@@ -49,35 +60,32 @@ public class HelloServlet extends HttpServlet {
 				"      <a class=\"navbar-brand\" href=\"#\">CS472-WAP ::: Lab10</a>\r\n" + 
 				"      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n" + 
 				"        <span class=\"navbar-toggler-icon\"></span>\r\n" + 
-				"      </button>\r\n" + 
-				"      <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\r\n" + 
-				"        <ul class=\"navbar-nav mr-auto\">\r\n" + 
-				"          <li class=\"nav-item active\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"#\">Home <span class=\"sr-only\">(current)</span></a>\r\n" + 
-				"          </li>\r\n" + 
-				"          <li class=\"nav-item\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"#\">About</a>\r\n" + 
-				"          </li>\r\n" + 
-				"          <li class=\"nav-item\">\r\n" + 
-				"            <a class=\"nav-link\" href=\"contactUs\">Contact Us</a>\r\n" + 
-				"          </li>\r\n" + 
-				"        </ul>\r\n" + 
-				"        <form class=\"form-inline mt-2 mt-md-0\">\r\n" + 
-				"          <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\r\n" + 
-				"          <button class=\"btn btn-outline-success my-2 my-sm-0 btn_search\" type=\"submit\">Search</button>\r\n" + 
-				"        </form>\r\n" + 
-				"      </div>\r\n" + 
+				"      </button>\r\n" +  
 				"    </nav>\r\n" + 
 				"\r\n" + 
 				"    <main role=\"main\" class=\"container\">\r\n" + 
-				"      <div class=\"jumbotron\">\r\n" + 
-				"        <h1>Hello, world of HttpServlet 4.0!</h1>\r\n" + 
-				"		<h4>Welcome to Lab 10</h4>\r\n" + 
-				"        <p class=\"lead\">This is a simple hero unit, a simple jumbtron-style component for calling extra attention to featured content or information.</p>\r\n" + 
-				"		<hr/>\r\n" + 
-				"		<p>It uses utility classes for typography and spacing to space content out within the target container</p>\r\n" + 
-				"        <a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">Learn More</a>\r\n" + 
-				"      </div>\r\n" + 
+				"		<p class=\"date_style\">" + session.getAttribute("dateToday") + "</p>\r\n" + 
+				"		<div class=\"card card_style\">\r\n" + 
+				"			<div class=\"card-header\">\r\n" + 
+				"				<h4>Thank you! Your message has been received as follows:</h4>\r\n" + 
+				"			</div>\r\n" + 
+				"			<div class=\"card-body\">\r\n" + 
+				"				<h6>Name: " + session.getAttribute("fullName") + "</h6>\r\n" + 
+				"				<p>Gender: " + session.getAttribute("gender") + "</p>\r\n" + 
+				"				<p>Category: " + session.getAttribute("category") + "</p>\r\n" + 
+				"				<p class=\"card-text\">Message: " + session.getAttribute("message") + "</p>\r\n" + 
+				"				<p class=\"card-text\">Please feel free to <a href=\"contactUs\">Contact us</a> again</p>\r\n" + 
+				"			</div>\r\n" + 
+				"		</div>\r\n" + 
+				"		\r\n" + 
+				"		<div class=\"row\">\r\n" + 
+				"			<div class=\"col-md-6\">\r\n" + 
+				"							<span>Hit count for the page:</span><span>" + this.getServletContext().getAttribute("hitCount") + "</span>\r\n" + 
+				"			</div>\r\n" + 
+				"			<div class=\"col-md-6\">\r\n" + 
+				"				<span class=\"span_style\">" + request.getServletContext().getAttribute("totalHitCount") +"</span><span class=\"span_style\">Total Hit count for the entire WebApp:</span>\r\n" + 
+				"			</div>\r\n" + 
+				"		</div>\r\n" + 
 				"    </main>\r\n" + 
 				"	\r\n" + 
 				"	<footer>\r\n" + 

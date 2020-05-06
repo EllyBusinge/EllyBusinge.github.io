@@ -1,4 +1,4 @@
-package org.miu.Lab13;
+package org.miu.Lab13.controllers;
 
 import java.io.IOException;
 
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/contactUs")
-public class ContactUsServlet extends HttpServlet {
+public class ContactUsController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	

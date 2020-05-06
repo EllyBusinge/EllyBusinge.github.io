@@ -1,4 +1,4 @@
-package org.miu.Lab13;
+package org.miu.Lab13.controllers;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet("/processData")
-public class DataHandlerServlet extends HttpServlet {
+public class DataHandlerController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	
