@@ -5,6 +5,7 @@ HELP.md
 /RemoteSystemsTempFiles/
 /.metadata/
 /.recommenders/
+/Servers/
 
 ### STS ###
 .apt_generated
