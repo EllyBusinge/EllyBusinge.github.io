@@ -23,6 +23,7 @@ public class PageAccessFilter implements Filter {
 		ServletContext context = request.getServletContext();
 		int totalHitCount = (Integer)context.getAttribute("totalHitCount");
 		totalHitCount++;
+		System.out.println("Web page counter has been incremented to " + totalHitCount);
 		context.setAttribute("totalHitCount", totalHitCount);
 		chain.doFilter(request, response);
 	}
@@ -30,6 +31,7 @@ public class PageAccessFilter implements Filter {
 	@Override
 	public void init(FilterConfig config) throws ServletException {
 		int totalHitCount = 0;
+		System.out.println("Initializing the web page(s) counter to Zero !!!");
 		config.getServletContext().setAttribute("totalHitCount", totalHitCount);
 	}
 }
