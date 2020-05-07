@@ -54,7 +54,7 @@
                     <div class="row">
                         <div class="col-md-12">
 							<div class="form-group">
-								<label for="message">*Message: ${hitCount}</label>
+								<label for="message">*Message:</label>
 								<textarea class="form-control" id="message" name="message" rows="2"></textarea>
 							</div>
                         </div>

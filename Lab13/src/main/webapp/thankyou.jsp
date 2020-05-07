@@ -6,7 +6,7 @@
 	<jsp:include page="includes/nav.jsp" flush="true" />
 
 	<main role="main" class="container">
-  		<p class="date_style">${hitCount}</p>
+  		<p class="date_style">${dateToday}</p>
 		<div class="card card_style">
 			<div class="card-header">
 				<h4>Thank you! Your message has been received as follows:</h4>
