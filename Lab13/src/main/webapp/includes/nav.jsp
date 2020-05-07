@@ -21,42 +21,53 @@
 						</a></li>
 					</c:when>
 					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="index">Home <span
-								class="sr-only">(current)</span></a></li>
+						<li class="nav-item"><a class="nav-link" href="index">Home
+								<span class="sr-only">(current)</span>
+						</a></li>
 					</c:otherwise>
 				</c:choose>
 
 				<li class="nav-item"><a class="nav-link" href="#">About</a></li>
-				
+
 				<c:choose>
 					<c:when test="${currentPage == 'contactus'}">
-						<li class="nav-item active"><a class="nav-link" href="contactUs">Contact Us</a></li>
+						<li class="nav-item active"><a class="nav-link"
+							href="contactUs">Contact Us</a></li>
 					</c:when>
 					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="contactUs">Contact Us</a></li>
+						<li class="nav-item"><a class="nav-link" href="contactUs">Contact
+								Us</a></li>
 					</c:otherwise>
 				</c:choose>
-				
+
 				<c:choose>
 					<c:when test="${currentPage == 'messages'}">
-						<li class="nav-item active"><a class="nav-link" href="messages">Contact Messages</a></li>
+						<li class="nav-item active"><a class="nav-link"
+							href="messages">Contact Messages</a></li>
 					</c:when>
 					<c:otherwise>
-						<li class="nav-item"><a class="nav-link" href="messages">Contact Messages</a></li>
+						<li class="nav-item"><a class="nav-link" href="messages">Contact
+								Messages</a></li>
 					</c:otherwise>
 				</c:choose>
 			</ul>
 
-			<c:if test="${currentPage == 'messages'}">
-				<form class="form-inline mt-2 mt-md-0" id="searchMessageForm"
-					method="post" action="messages">
-					<input name="searchItem" id="searchItem"
-						class="form-control mr-sm-2" type="text" placeholder="Search"
-						aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0 btn_search"
-						type="submit">Search</button>
-				</form>
-			</c:if>
+			<form class="form-inline mt-2 mt-md-0" id="searchMessageForm"
+				method="post" action="messages">
+				<input name="searchItem" id="searchItem"
+					class="form-control mr-sm-2" type="text" placeholder="Search"
+					aria-label="Search">
+				<c:choose>
+					<c:when test="${currentPage == 'messages'}">
+						<button class="btn btn-outline-success my-2 my-sm-0 btn_search"
+							type="submit">Search</button>
+					</c:when>
+					<c:otherwise>
+						<button class="btn btn-outline-success my-2 my-sm-0 btn_search"
+							type="submit" disabled="disabled">Search</button>
+					</c:otherwise>
+				</c:choose>
+			</form>
 		</div>
 	</nav>
 </body>
