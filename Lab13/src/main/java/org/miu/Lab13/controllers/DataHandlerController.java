@@ -57,6 +57,8 @@ public class DataHandlerController extends HttpServlet {
 			request.setAttribute("errorMsg", errorMessages.toString());
 			request.getRequestDispatcher("contactUs").forward(request, response);
 		} else {
+			
+			
 			HttpSession session = request.getSession(true);
 			session.setAttribute("fullName", fullName.get());
 			session.setAttribute("gender", gender.get());

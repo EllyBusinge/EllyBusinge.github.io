@@ -72,4 +72,9 @@ public class Message implements Serializable {
 	public void setMessageId(int messageId) {
 		this.messageId = messageId;
 	}
+	
+	@Override
+	public String toString() {
+		return "FullName - " + fullName + ", Gender - " + gender + ", Category - " + category + ", Message - " + message;
+	}
 }
