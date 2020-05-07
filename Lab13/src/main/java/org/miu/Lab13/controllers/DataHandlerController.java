@@ -12,10 +12,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/processData")
+import org.miu.Lab13.model.Message;
+import org.miu.Lab13.repository.MessageRepository;
+
+@WebServlet(name = "DataHandlerController", urlPatterns = {"/processFormData"})
 public class DataHandlerController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
+	
+	private MessageRepository messageRepository;
+	
+	public DataHandlerController() {
+		messageRepository = MessageRepository.getInstance();
+	}
 	
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
@@ -57,7 +66,8 @@ public class DataHandlerController extends HttpServlet {
 			request.setAttribute("errorMsg", errorMessages.toString());
 			request.getRequestDispatcher("contactUs").forward(request, response);
 		} else {
-			
+			//Add message to repository
+			messageRepository.addMessage(new Message(fullName.get(), gender.get(), category.get(), message.get()));
 			
 			HttpSession session = request.getSession(true);
 			session.setAttribute("fullName", fullName.get());
@@ -69,7 +79,7 @@ public class DataHandlerController extends HttpServlet {
 			SimpleDateFormat format = new SimpleDateFormat ("EEEE, dd MMM yyyy");
 			session.setAttribute("dateToday", format.format(dateToday));
 			
-			response.sendRedirect("successServlet");
+			response.sendRedirect("thankYou");
 		}
 	}
 }
