@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <jsp:include page="includes/header.jsp"/>
@@ -6,8 +8,8 @@
 	<main role="main" class="container">
   		<div style="padding-top: 1em;" class="container">
             <h5>Customer Contact Form</h5>
-			<div class="col-md-12">${errorMessage}</div>
-            <form id="contactUsForm" method="post" action="processData">
+			<div class="col-md-12">${errorMsg}</div>
+            <form id="contactUsForm" method="post" action="processFormData">
                 <fieldset>
                     <legend></legend>
                     <div class="row">
@@ -52,7 +54,7 @@
                     <div class="row">
                         <div class="col-md-12">
 							<div class="form-group">
-								<label for="message">*Message:</label>
+								<label for="message">*Message: ${hitCount}</label>
 								<textarea class="form-control" id="message" name="message" rows="2"></textarea>
 							</div>
                         </div>
@@ -65,7 +67,6 @@
 							</div>
 						</div>
                     </div>
-					
 					<jsp:include page="includes/pageCounter.jsp" flush="true"/>
                 </fieldset>
             </form>           

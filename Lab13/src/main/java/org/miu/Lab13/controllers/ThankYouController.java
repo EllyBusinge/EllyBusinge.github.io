@@ -36,10 +36,7 @@ public class ThankYouController extends HttpServlet {
 	
 	private void sendResponse(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setContentType("text/html");
-			
-		HttpSession session = request.getSession(true);
 		this.getServletContext().setAttribute("hitCount", ++hitCount);
-		String html = "";
-		response.getWriter().write(html);
+		
 	}
 }
