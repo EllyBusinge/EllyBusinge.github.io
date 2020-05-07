@@ -24,13 +24,14 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		<!-- https://mvnrepository.com/artifact/jstl/jstl -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
 		<dependency>
-    		<groupId>jstl</groupId>
-    		<artifactId>jstl</artifactId>
+    		<groupId>javax.servlet</groupId>
+   			<artifactId>jstl</artifactId>
     		<version>1.2</version>
-		</dependency>	
+		</dependency>
 	</dependencies>
+	
 	<build>
 		<finalName>Lab13</finalName>
 	</build>

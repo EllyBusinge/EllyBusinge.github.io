@@ -8,11 +8,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "ContactUsPageController", urlPatterns = {"/contactUs"})
-public class ContactUsPageController extends HttpServlet {
+@WebServlet(name = "ThankYouController", urlPatterns = {"/thankYou"})
+public class ThankYouController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	private int hitCount; 
 
 	@Override
@@ -35,7 +35,6 @@ public class ContactUsPageController extends HttpServlet {
 	
 	private void sendResponse(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		this.getServletContext().setAttribute("hitCount", ++hitCount);
-		request.setAttribute("currentPage", "contactus");
-		request.getRequestDispatcher("/contact-form.jsp").forward(request, response);
+		request.getRequestDispatcher("/thankyou.jsp").forward(request, response);
 	}
 }
