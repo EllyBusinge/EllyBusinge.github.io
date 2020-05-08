@@ -1,4 +1,4 @@
-package org.miu.edu;
+package org.miu.edu.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;

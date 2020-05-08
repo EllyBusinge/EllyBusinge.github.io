@@ -32,6 +32,7 @@
 	</dependencies>
 
 	<build>
+	<finalName>Lab14</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>

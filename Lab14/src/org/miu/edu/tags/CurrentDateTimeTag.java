@@ -21,15 +21,18 @@ public class CurrentDateTimeTag extends SimpleTagSupport {
 		LocalDateTime dtNow = LocalDateTime.now();
 
 		JspWriter out = getJspContext().getOut();
+		String text = null;
 		
 		if (color != null && size != null) 
-			out.write(String.format("<span style='color:%s; font-size:%s;>%s</span>", color, size, dtNow.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy"))));
+			text = String.format("<span style='color:%s; font-size:%s;'>%s</span>", color, size, dtNow.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy")));
 		else {
 			if (color != null) 
-				out.write(String.format("<span style='color:%s;'>%s</span>", color, dtNow.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy"))));
+				text = String.format("<span style='color:%s;'>%s</span>", color, dtNow.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy")));
 			if (size != null) 
-				out.write(String.format("<span style='font-size:%s;'>%s</span>", size, dtNow.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy"))));
+				text = String.format("<span style='font-size:%s;'>%s</span>", size, dtNow.format(DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy")));
 		}
+		System.out.println("Tag text is " + text);
+		out.write(text);
 	}
 
 	public String getColor() {
