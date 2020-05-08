@@ -35,6 +35,7 @@ public class ThankYouController extends HttpServlet {
 	
 	private void sendResponse(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		this.getServletContext().setAttribute("hitCount", ++hitCount);
+		request.setAttribute("currentPage", "thankyou");
 		request.getRequestDispatcher("/thankyou.jsp").forward(request, response);
 	}
 }
