@@ -32,13 +32,21 @@ label {
     font-weight: bold;
 }
 
-.telephone {
-    color: blue;
-    text-decoration: underline;
-}
-
 .nav_style {
     border-left: white 1px solid; 
     padding-left: 2em; 
     padding-right: 2em;
+}
+
+.table_header {
+    background-color: gainsboro;
+}
+
+.modal_style {
+    background-color: #33a6e7;
+}
+
+h4 {
+    color: white;
+    margin-left: 38%;
 }
