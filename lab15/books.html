@@ -49,12 +49,51 @@
               <div class="modal-content">
                 <div class="modal-header modal_style">
                   <h4 class="modal-title" id="myLargeModalLabel">Add New Book</h4>
-
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                   </button>
                 </div>
                 <div class="modal-body">
+                    <span><b>Note:</b> Form fields marked with asterisk (*) are required</span>
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="patientNo">*Book Title:</label>
+                                <input class="form-control" pattern="E?P-[0-9]{3}-[0-9]{6}" type="text" name="patientNo" id="patientNo" placeholder="EP-XXX-XXXXXX" required autofocus>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName">*ISBN:</label>
+                                <input class="form-control" pattern="[A-Za-z]+" type="text" name="firstName" id="firstName" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="middleName">*Date Published:</label>
+                                <input  class="form-control" type="date" name="dob" id="dob" placeholder="mm/dd/yyyy" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="firstName">*Publisher:</label>
+                                <input class="form-control" pattern="[A-Za-z]+" type="text" name="firstName" id="firstName" placeholder="Enter First Name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="middleName">*Overdue Fee Per Day:</label>
+                                <input class="form-control" pattern="[A-Za-z]+" type="text" name="middleName" id="middleName" placeholder="0.00">
+                                <small class="form-text text-muted">Enter a valid decimal amount; in dollars and cents, no comma e.g. 1.99</small>
+                            </div>
+                        </div>
+                    </div>
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
