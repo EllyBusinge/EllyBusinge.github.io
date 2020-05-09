@@ -1,0 +1,44 @@
+/* app.css */
+/* author: Elly Businge */
+
+body {
+    margin-bottom: 70px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f5f5f5;
+    line-height: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+.nav_header {
+    background-color: #33a6e7;
+}
+
+.submit_btn {
+    background-color: #e95420;
+    color: white;
+    background-image: none;
+    border: 1px solid #e95420;
+}
+
+label {
+    font-weight: bold;
+}
+
+.telephone {
+    color: blue;
+    text-decoration: underline;
+}
+
+.nav_style {
+    border-left: white 1px solid; 
+    padding-left: 2em; 
+    padding-right: 2em;
+}
