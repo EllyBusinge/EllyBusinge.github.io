@@ -87,7 +87,7 @@
                 $("#message").text("Book added successfully");
                 setInterval(closeModal, 7000);  
                
-                //fetchAllBooks();
+                fetchAllBooks();
 
                 txtTitle.value = "";     
                 txtIsbn.value = "";   
